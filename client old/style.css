@@ -1,0 +1,8 @@
+.dialogs{
+    display: flex;
+}   
+
+.dialog{
+    border: 1px solid green;
+    margin: 20px;
+}

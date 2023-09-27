@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h2>Main page</h2>
+    <div id="app">
+        <button v-on:click="getTopics()">Загрузить данные</button>
+        <h3>Выберите Тему:</h3>
+        <select v-model="selectedTopic" v-on:change="getDialogs()">
+            <option selected value="">Выбрать</option>
+            <option value="0">Airport</option>
+            <option value="1">Restaurant</option>
+        </select>
+        <div  v-if="workmode">
+            <h2> {{topics[selectedTopic].name}}</h2> 
+            <img v-bind:src="topics[selectedTopic].topicImage" width="400" height="300" alt="">  
+            <h2>Dialogs: </h2>  
+            <div class="dialogs">
+                <div class="dialog" v-for="item in dialogs">
+                    <h3>{{item.name}}</h3>
+                    <img v-bind:src="item.dialogImage" width="400" height="300" alt="">
+                </div>
+            </div>   
+        </div>
+    </div>
+
+    <script src="/index.js"></script>
+</body>
+</html>

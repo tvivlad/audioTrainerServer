@@ -1,0 +1,35 @@
+{
+  "name": "audiotrainer",
+  "version": "1.0.0",
+  "description": "For training English",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "prod": "node app.js"
+  },
+  "keywords": [
+    "NodeJS",
+    "Audio",
+    "English",
+    "Mobile"
+  ],
+  "author": "Vlad Tkachev",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "jsonwebtoken": "^9.0.1",
+    "mysql2": "^3.0.1",
+    "path": "^0.12.7",
+    "sequelize": "^6.28.0",
+    "uuid": "^9.0.0"
+  }
+}
